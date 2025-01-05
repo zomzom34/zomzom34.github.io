@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müzik</title>
+    <style>
+        body {
+            font-family: 'Roboto', Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f8fe;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #dc143c, #f08080);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #ff416c;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #ffe9ec;
+            color: #ff4b2b;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            font-size: 2rem;
+            color: #ff416c;
+            margin-bottom: 1rem;
+        }
+		nav {
+			display: flex;
+			justify-content: center;
+			background: #555;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			padding: 1rem;
+			display: block;
+			position: relative;
+		}
+
+		nav .dropdown {
+			position: relative;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			top: 100%; /* Alt menü, "Oyunlar" bağlantısının hemen altında görünür */
+			left: 0;
+			background: #777;
+			min-width: 200px;
+			z-index: 1;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+		}	
+
+		.dropdown-content a {
+			padding: 0.5rem 1rem;
+			color: white;
+			background: #777;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown-content a:hover {
+			background: #888;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block; /* Hover yapıldığında alt seçenekler görünür */
+		}
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+		/* Kullanılan görseller için tasarım */
+		img {
+        max-width: 80%; /* Bu şekilde görselin genişliği ekranın %80'ini geçmez */
+        height: auto; /* Oranları koruyarak yükseklik otomatik ayarlanır */
+        margin: 20px 0;
+        border-radius: 10px; /* Görsele yuvarlak kenarlar ekler */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Hafif bir gölge efekti */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Müzik</h1><!-- İçerik başlığı -->
+    </header>
+	<!--Ana sayfa, oyunlar ve alt seçenekleri, tarih, fitness, müzik sayfalarının bağlantısı -->
+    <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <div class="dropdown">
+        <a href="oyunlar.html" class="dropdown-btn">Oyunlar</a>
+        <div class="dropdown-content">
+            <a href="hikayeli.html">Hikayeli</a>
+            <a href="simulasyon.html">Simülasyon</a>
+            <a href="hayatta_kalma.html">Hayatta Kalma</a>
+			<a href="çok_oyunculu_korku.html">Çok Oyunculu Korku</a>
+        </div>
+    </div>
+    <a href="tarih.html">Tarih</a>
+    <a href="fitness.html">Fitness</a>
+    <a href="müzik.html">Müzik</a>
+	</nav>
+	<div class="content">
+        <h2>Müzik Tutkusu</h2>
+		<div align="justify">
+		<p>Bu sayfada müzik konusuna değiniyorum. Spotify hesabıma anasayfanın sonundaki linkten ulaşabilirsiniz. İyi okumlar:)</p>
+		<h3>Dinleme Üzerine</h3>
+        <p>Müzik dinlemek ve şarkı söylemek benim için büyük bir tutku. Bulduğum her fırsatta 
+		müzik dinlerim, kulaklıklarım kulağıma yapışıktır desem yalan olmaz. Şarkı listelerime çok özen
+		gösteririm. Ne de olsa günümün neredeyse yarısı onların içindeki şarkıları dinlemekle geçiyor.
+		Tek bir türe bağlı kalmam. Rap, R&B, pop, edm gibi birçok türü dinlerim. 11, 12 farklı dilde
+		dinlediğim şarkılar bulunuyor. Bu şekilde müziğin dünyada tüm sınırları aşıp bana ulaşabilmesi,
+		müziğin en sevdiğim yönlerinden biri. Beni kendine bağlaması için herhangi bir unsuru etkili 
+        olabilir. Sözleri, vuruşları, melodisi, sanatçının sesi/hayatı... Duygularımı harekete geçirebilen
+		her müzik benim için güzel müziktir. Bu duygular öfke, üzüntü gibi duygular olsa bile böyledir.
+		Bu tür duygulara olumsuz sıfatını bile takmam çünkü yaşamamızda gerekli olmaları bir nebze de olsa
+		onlara olumluluk katar.</p>
+		<h3>Söyleme Üzerine</h3>
+        <p>Yalnız kaldığım her anda şarkı söylerim. Sesimin geliştirilebilecek güzellikte olduğuna inanıyorum 
+		ve her zaman sanatçı olup şarkılar yazmanın,bestelemenin ve söylemenin hayalini kurmuşumdur. Evde kendi 
+		konserimi vermek birçok kişide olduğu gibi benim de yapmayı sevdiğim aktivitelerden.</p>
+		<h3>Çalma Üzerine</h3>
+        <p>Enstrüman olarak okulda flüt, melodika gibi aletler çalmıştım. Fakat piyano ya da keman gibi bir enstrüman 
+		çalmayı tamamiyle öğrenmek en büyük hedeflerimden biri. Parmaklarımın yapısından dolayı kolay alışacağımı 
+		düşünüyorum. Bu tür aktiviteler insanın ruhunu dinlendireceği için herkese öneririm.</p>
+		</div>
+		<img src="C:\Users\sudee\OneDrive\Masaüstü\14a3539e-8dbd-4665-9fc2-de22235d77e6.jpg" alt="müzik dinlediğim platformlar" title="müzik dinlediğim platformlar" />
+	</div>
+	</div>
+    <footer>
+        <p>&copy; 2024 BMG Projesi</p>
+    </footer>
+</body>
+</html>

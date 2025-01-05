@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hikayeli Oyunlar</title>
+    <style>
+        body {
+            font-family:'Roboto', Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #555;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            display: block;
+            position: relative;
+        }
+
+        nav .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #777;
+            min-width: 200px;
+            z-index: 1;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            padding: 0.5rem 1rem;
+            color: white;
+            background: #777;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background: #888;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+		img {
+        max-width: 80%; 
+        height: auto; 
+        margin: 20px 0;
+        border-radius: 10px; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+    }
+    </style>
+</head>
+<body>
+    <nav>
+	<!--Ana sayfa, oyunlar ve alt seçenekleri, tarih, fitness, müzik sayfalarının bağlantısı -->
+        <a href="index.html">Ana Sayfa</a>
+        <div class="dropdown">
+            <a href="oyunlar.html" class="dropdown-btn">Oyunlar</a>
+            <div class="dropdown-content">
+                <a href="hikayeli.html">Hikayeli</a>
+                <a href="simulasyon.html">Simülasyon</a>
+                <a href="hayatta_kalma.html">Hayatta Kalma</a>
+				<a href="çok_oyunculu_korku.html">Çok Oyunculu Korku</a>
+            </div>
+        </div>
+        <a href="tarih.html">Tarih</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="müzik.html">Müzik</a>
+    </nav>
+    <div class="content">
+        <h1>Hayatta Kalma Oyunları</h1>
+		<div align="justify">
+		<p>Hayatta kalma oyunları hem oynamayı hem izlemeyi sevdiğim bir tür. Doğayla veya  çeşitli koşullarla
+		baş başa kaldığımız, kaynak toplayıp tehlikelerden korunmaya çalıştığımız
+		oyunlar hoşuma gidiyor. Aşağıda iki tane örnek bulunuyor. Bu örnekler dışında The Forest, 7 Days to Die, Sons of The Forest
+		oyunlarını öneririm.</p>
+		</div>
+		<!-- Oyun örneklerinin görselleri(alternatif ve başlıkla beraber), açıklaması -->
+		<h3>The Long Dark</h3>
+        <img src="C:\Users\sudee\OneDrive\Masaüstü\74844440-5009-46f5-b5d3-2295c185cb03.jpg" alt="The Long Dark" title="The Long Dark" />
+		<div align="justify">
+        <p class="game-description">
+			The Long Dark, soğuk ve ıssız bir açık dünya ortamında hayatta 
+			kalmaya çalıştığınız bir hayatta kalma oyunudur. Elektriklerin 
+			kesildiği bir dünyada, kaynakları yöneterek yiyecek, su ve barınak 
+			temin etmeli, vahşi doğa ve zorlu hava koşullarıyla mücadele 
+			etmelisiniz. Gerçekçi hava koşulları, vahşi hayvanlar ve sınırlı 
+			kaynaklarla hayatta kalma mücadelesi sunar. Bu oyunda yapılan zorluk
+			seçimine göre oyunun seyir zevki değişiyor.
+        </p>
+		</div>
+		<h3>60 Seconds!</h3>
+        <img src="C:\Users\sudee\OneDrive\Masaüstü\7026ba69-c79a-49e1-8353-e2ab31b98f6f.jpg" alt="60 Seconds!" title="60 Seconds!" />
+		<div align="justify">
+        <p class="game-description">
+			60 Seconds!, bir nükleer patlama öncesinde sınırlı sürede malzeme 
+			ve aile üyelerini toplayarak sığınakta hayatta kalmaya çalıştığınız 
+			kara mizah dolu bir hayatta kalma oyunudur. Kararlarınız hayatta kalma 
+			şansınızı belirler. Bu oyun için birçok farklı video izledim, gayet 
+			fazla senaryo ve oyun sonu içeriyor.
+		</div>
+	</div>
+</body>
+</html>

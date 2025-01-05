@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<!-- Ana sayfada yorum satırlarını daha ayrıntılı tuttum. Diğer sayfalarda yorum satırları sıklığı az olacak. -->
+<!-- Projedeki görselleri telif hakkını düşünerek  yapay zekaya tasarlattım. -->
+
+	 <!-- HTML dokümanının Türkçe dilinde olduğunu belirtir. -->
+    <meta charset="UTF-8">
+	 <!-- Mobil cihazlarda uygun görüntüleme için viewport ayarları. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Web sayfamın başlık etiketi. -->
+    <title>Hobilerim</title>
+	<!-- CSS ile web sayfası stillerini oluşturdum. -->
+    <style>
+		 /* Genel gövde stilleri */
+        body {
+            font-family: 'Roboto', Verdana , Sans-Serif;/* Yazı tipi */
+            margin: 0;/* Sayfanın varsayılan kenar boşluklarını kaldırır */
+            padding: 0;/* Varsayılan iç boşlukları kaldırır */
+            background-color: #f3f8fe;/* Arka plan rengi */
+            color: #333;/* Metin rengi */
+        }
+		 /* Sayfa başlığı için üstbilgi alanı */
+        header {
+            background: linear-gradient(135deg, #9932cc, #9370db);/* Üst kısım tasarımı için renk geçişi */
+            color: #fff;/* Metin rengi */
+            padding: 1.5rem 0; /* İçerik boşluğu */
+            text-align: center;/* Metni ortalar */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* Gölge efekti */
+        }
+        header h1 {
+            font-size: 2.5rem;/* Başlık metni boyutu */
+            margin: 0; /* Varsayılan kenar boşluklarını kaldırır */
+        }
+		/* Kartların(oyunlar, tarih, fitness, müzik) bulunduğu kapsayıcı */
+		.cards-container {
+            display: flex;/* Kartların yatay dizilimini sağlar */
+            flex-wrap: wrap;/* Alan dolduğunda bir alt satıra geçer */
+            justify-content: center;/* Kartları yatayda ortalar */
+            gap: 20px;/* Kartlar arası boşluk */
+            margin: 40px auto;/* Kapsayıcının dış boşlukları */
+            max-width: 1000px;/* Maksimum genişlik */
+        }
+		/* Kartlardan birinin stili */
+        .card {
+            background: #fff;/* Beyaz arka plan */
+            width: %40;/* Kart genişliği */
+            padding: 20px;/* İç boşluk */
+            border-radius: 10px;/* Köşeleri yuvarlatır */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/* Gölge efekti */
+            text-align: center;/* Kart içeriğini ortalar */
+            transition: transform 0.3s, box-shadow 0.3s;/* Hover efektleri */
+            cursor: pointer;/* Pointer imleci */
+        }
+		/* Kart üzerine gelindiğinde oluşan efekt */
+        .card:hover {
+            transform: translate(-10px);/* Hafif kayma efekti */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);/* Daha belirgin bir gölge */
+        }
+		/* Kart içindeki resmin stili */
+        .card img {
+            width: 100px;/* Resim genişliği */
+            height: 100px; /* Resim yüksekliği */
+            object-fit: cover;/* Resmi kesmeden tam bir şekilde sığdırır */
+            margin-bottom: 15px;/* Alt boşluk */
+            border-radius: 50%;/* Yuvarlak resim(logo görüntüsü vermek için) */
+            border: 3px solid #2575fc;/* Mavi çerçeve */
+        }
+		 /* Kart başlığı */
+        .card h2 {
+            font-size: 1.5rem;/* Başlık boyutu */
+            color: #2575fc; /* Metin rengi */
+            margin: 10px 0;/* Dikey boşluk */
+        }
+		/* Kart açıklama metni */
+        .card p {
+            font-size: 1rem;/* Yazı boyutu */
+            color: #666; /* Metin rengi */
+            margin: 10px 0 0;/* Üstte boşluk, altta yok */
+        }
+		 /* Navigasyon çubuğu */
+        nav {
+            display: flex;/* Yatay düzenleme */
+            justify-content: center;/* Ortalar */
+            background: #fff;/* Beyaz arka plan */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);/* Hafif gölge */
+        }
+		 /* Navigasyon bağlantıları */
+        nav a {
+            color: #2575fc;/* Mavi metin */
+            text-decoration: none;/* Alt çizgiyi kaldırır */
+            padding: 1rem 1.5rem;/* İç boşluk */
+            font-weight: bold;/* Kalın yazı */
+            transition: background 0.3s, color 0.3s;/* Hover efektleri */
+        }
+        nav a:hover {
+            background: #f3f8fe;/* Arka plan değişimi */
+            color: #6a11cb;/* Metin rengi değişimi */
+        }
+		/* İçerik bölümü */
+        .content {
+            max-width: 800px;/* Maksimum genişlik */
+            margin: 20px auto;/* Ortalamak için dış boşluk */
+            padding: 20px;/* İç boşluk */
+            text-align: center;/* Metni ortalar */
+            background: #fff;/* Beyaz arka plan */
+            border-radius: 8px;/* Köşeleri yuvarlatma işlemi*/
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* Hafif gölge efekti ekler */
+        }
+        .content h2 {
+            font-size: 2rem;
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+		nav {
+			display: flex;
+			justify-content: center;
+			background: #555;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			padding: 1rem;
+			display: block;
+			position: relative;
+		}
+
+		nav {
+			display: flex;
+			justify-content: center;
+			background: #555;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			padding: 1rem;
+			display: block;
+			position: relative;
+		}
+
+		nav .dropdown {
+			position: relative;
+		}
+
+		.dropdown-content {
+			display: none;/* Oyunların alt seçenekleri başlangıçta gizli tutulur */
+			position: absolute; /* Pozisyon relative e göre ayarlanır */
+			top: 100%; /* Alt seçenekler, oyunlar butonunun hemen altında başlar */
+			left: 0; /* Soldan hizalama yapılır */
+			background: #777;/* Arka plan rengi */
+			min-width: 150px;/* Minimum genişlik */
+			z-index: 1;/* Diğer içeriklerin üstünde görünmesini sağlar */
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);/* Hafif gölge efekti verir */
+		}
+
+		.dropdown-content a {
+			padding: 0.5rem 1rem;
+			color: white;
+			background: #777;
+			text-decoration: none;
+			display: block;/* Blok formatındaolduğunu gösterir */
+		}
+
+		.dropdown-content a:hover {
+			background: #888;/* Hover sırasında arka plan değişimi gerçekleşir */
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block; /* Hover yapıldığında alt seçenekler görünür */
+			}
+
+			display: flex; /* Flexbox özelliğini aktif eder */
+			flex-direction: column; /* Üst üste yerleştirir */
+			justify-content: center; /* Dikeyde ortalar */
+			align-items: center; /* Yatayda ortalar */
+			height: 100vh; /* Tam ekran yüksekliği */
+			margin: 0; /* Varsayılan boşlukları kaldırır */
+			background-color: #f3f8fe; /* Arka plan rengi */
+			font-family: 'Arial', sans-serif;
+		}
+		body {
+			margin: 0;
+			font-family: 'Verdana', sans-serif;
+			background-color: #f3f8fe;
+		}
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* İçeriği yatayda ortalar */
+			justify-content: center; /* İçeriği dikeyde ortalar */
+			text-align: center;
+			margin: 0 auto;
+			padding: 20px;
+			max-width: 800px; /* Ortalamak için genişlik sınırlaması */
+		}
+
+
+		 /* Footer stili */
+        footer {
+            text-align: center; /* Metni ortalar */
+            padding: 1rem; /* İç boşluk */
+            background: #708090; /* Gri arka plan */
+            color: white; /* Beyaz metin */
+            margin-top: 20px; /* Üst boşluk */
+        }
+        footer p {
+            margin: 0; /* Varsayılan boşlukları kaldırır */
+        }
+    </style>
+</head>
+<body>
+    <header>
+	<!--Sayfanın ana başlığı-->
+        <h1>Hobilerim</h1>
+    </header>
+	<!--Ana sayfa, oyunlar ve alt seçenekleri, tarih, fitness, müzik sayfalarının bağlantısı -->
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <div class="dropdown">
+        <a href="oyunlar.html" class="dropdown-btn">Oyunlar</a>
+        <div class="dropdown-content">
+        <a href="hikayeli.html">Hikayeli</a>
+        <a href="simulasyon.html">Simülasyon</a>
+        <a href="hayatta_kalma.html">Hayatta Kalma</a>
+		<a href="çok_oyunculu_korku.html">Çok Oyunculu Korku</a>
+        </div>
+		</div>
+        <a href="tarih.html">Tarih</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="müzik.html">Müzik</a>
+    </nav>
+	<!-- Ana içerik bölümü -->
+    <div class="content">
+        <h2>Ana Sayfa</h2><!-- İçerik başlığı -->
+		<div align="justify"><!-- Metni iki yana hizalar -->
+		<!-- Yazdığım metinler -->
+        <p>Herkese merhaba. Bu web sitesini oluşturmaktaki amacım sizlere hobilerimi tanıtmak ve önerilerde bulunmak. 
+		Yukarıdaki menüde istediğiniz seçeneğe tıklayarak en çok vakit ayırdığım hobilerimle 
+		ilgili detaylı bilgilere ulaşabilirsiniz.</p>
+        <p>Kendimden kısaca bahsedecek olursam adım Nazife Sude. İstanbul doğumlu, 18 yaşında, 
+		Bursa Teknik Üniversitesi'nde bilgisayar mühendisliği bölümünü okuyan bir öğrenciyim.
+		Hobilerimi anlattığım bu web sitesinde izlediğim ve oynadığım oyunlara, tarihe olan ilgime, 
+		fitnessta en sevdiğim hareketlere, dinlediğim müziklere ayrıntılı bir şekilde ulaşabilirsiniz. 
+		Bunlar dışında başka hobilerimden bahsedecek olursam dizi, film, belgesel ve anime izlemeyi severim. 
+		Beynimde yer etmiş bir dizi olarak Oz'u söyleyebilirim. Bir hapishanenin birbirinden farklı
+		hayatları birleştirdiği ve hapishanenin içinde onlarca olayın yaşandığı aşırı sürükleyici bir 
+		diziydi. Bu diziyle beraber hayatımda ilk defa bir dizideki tüm oyuncuların başrol hissiyatı
+		verebileceğini gördüm. Anime olarak ise Tokyo Revengers'ı söyleyebilirim. Animedeki karakterler, hikayesi
+		ilgimi çeken türdendi. Bölümleri tamamlanmamış olmasına rağmen sonunu merak edip mangasını okumuştum.
+		Manga demişken liseden en yakın arkadaşım beni bu tür şeyler okumaya alıştırdı. Bu yüzden manga
+		okumak da hobilerim arasında. Tabii ki sevdiğim türden kitapları okumayı da seviyorum. Dizi,
+		kitap türünden hobiler dışında bir şeyler üretmek en büyük hobilerimden. Gün içinde rastgele 
+		anlarda evde bazı malzemeler bulup ortaya ürün çıkarmak hoşuma gider. Bu olayı son zamanlarda
+		pek yapamasam da TÜBİTAK etkinliklerinde yer alıp projeler yaparak yerini doldurduğum zamanlar oldu.
+		(Mükemmel projeler yapan bir youtube kanalı önerisi: Tolga Özuygur.)
+		Fiziksel olarak bale/jimnastik, yüzme tarzı aktiviteler yapmaktan hoşlanırım. Yemek yapmayı, yeni 
+		tatlı tarifleri denemeyi severim. Son zamanlarda ise video editlemeye,şarkı sözleri yazma ve beat
+		hazırlamaya, ticaretle ilgili konulara yöneliyorum. Bunların geleceğime katkısı olacağını 
+		düşünmekteyim. Hobilerimden genel bir çerçevede bahsettim. İsterseniz ayrıntılı hobi açıklamalarına
+		aşağıdaki kartlardan da ulaşabilirsiniz. Sayfanın en sonuna giderek İnstagram ve Spotify hesaplarımı
+		takip edebilirsiniz. Bana bir mesajınız varsa formu doldurarak iletebilirsiniz. Diğer sayfalarda size 
+		eğlenceler diliyorum:)
+		</p>
+		</div>
+		 <!-- Kartlar bölümü -->
+		<div class="cards-container">
+		<!-- Oyunlar için -->
+        <div class="card" onclick="window.location.href='oyunlar.html'">
+            <img src="C:\Users\sudee\OneDrive\Masaüstü\Gemini_Generated_Image_baaaarbaaaarbaaa.jpg" alt="Oyunlar">
+            <h2>Oyunlar</h2>                                                                                                 
+            <p>Favori oyunları keşfedin.</p>
+        </div>
+		<!-- Tarih için -->
+        <div class="card" onclick="window.location.href='tarih.html'">
+            <img src="C:\Users\sudee\OneDrive\Masaüstü\Gemini_Generated_Image_6yskkz6yskkz6ysk.jpg" alt="Tarih">
+            <h2>Tarih</h2>
+            <p>Geçmişe yolculuk yapın.</p>
+        </div>
+		<!-- Fitness için -->
+        <div class="card" onclick="window.location.href='fitness.html'">
+            <img src="C:\Users\sudee\OneDrive\Masaüstü\Gemini_Generated_Image_mkk0phmkk0phmkk0.jpg" alt="Fitness">
+            <h2>Fitness</h2>
+            <p>Sağlıklı yaşama adım atın.</p>
+        </div>
+		<!-- Müzik için -->
+        <div class="card" onclick="window.location.href='müzik.html'">
+            <img src="C:\Users\sudee\OneDrive\Masaüstü\Gemini_Generated_Image_not5e3not5e3not5.jpg" alt="Müzik">
+            <h2>Müzik</h2>
+            <p>Müzik dünyasını keşfedin.</p>
+        </div>
+	</div>
+	</div>
+	<!-- Benimle iletişime geçmek isteyenler için iletişim bölümü -->
+	<div class="content">
+        <section class="contact">
+            <h2>İletişim</h2>
+            <p>Bize ulaşmak için aşağıdaki formu doldurun:</p>
+			<!-- İletişim formu -->
+            <form action="tesekkurler.html" method="post">
+                <label for="name">Adınız:</label><br><!-- br etiketi ile alt satıra geçer -->
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="message">Mesajınız:</label><br>
+                <textarea id="message" name="message" required></textarea><br><br>
+                <button type="submit">Gönder</button>
+            </form>
+		</section>
+    </div>
+
+	<footer>
+    <h2>Beni Takip Edin</h2>
+	<!-- Beni takip etmek için verdiğim linkler -->
+    <a href="https://www.instagram.com/nazifesude7">Instagram</a> 
+    <a href="https://open.spotify.com/user/31ktceywxdjsg2kwmg26mlh6t5le?si=OCVJRbvFSDCFGe0sPD4Nmw">Spotify</a>
+	</footer>
+    <footer>
+        <p>&copy; 2024 BMG Projesi</p><!-- Telif hakkı bilgisi -->
+    </footer>
+</body>
+</html>
+
+
+

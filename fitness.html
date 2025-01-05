@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness</title>
+    <style>
+        body {
+            font-family: 'Roboto', Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f8fe;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #11998e;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #e6f9f3;
+            color: #38ef7d;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            font-size: 2rem;
+            color: #11998e;
+            margin-bottom: 1rem;
+        }
+		nav {
+			display: flex;
+			justify-content: center;
+			background: #555;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			padding: 1rem;
+			display: block;
+			position: relative;
+		}
+
+		nav .dropdown {
+			position: relative;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			top: 100%; /* Alt menü, "Oyunlar" bağlantısının hemen altında görünür */
+			left: 0;
+			background: #777;
+			min-width: 200px;
+			z-index: 1;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+		}
+
+		.dropdown-content a {
+			padding: 0.5rem 1rem;
+			color: white;
+			background: #777;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown-content a:hover {
+			background: #888;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block; /* Hover yapıldığında alt seçenekler görünür */
+		}
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+		/* Kullanılan görseller için tasarım */
+		img {
+        max-width: 80%; /* Bu şekilde görselin genişliği ekranın %80'ini geçmez */
+        height: auto; /* Oranları koruyarak yükseklik otomatik ayarlanır */
+        margin: 20px 0;
+        border-radius: 10px; /* Görsele yuvarlak kenarlar ekler */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Hafif bir gölge efekti */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness</h1><!-- İçerik başlığı -->
+    </header>
+	<!--Ana sayfa, oyunlar ve alt seçenekleri, tarih, fitness, müzik sayfalarının bağlantısı -->
+    <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <div class="dropdown">
+        <a href="oyunlar.html" class="dropdown-btn">Oyunlar</a>
+        <div class="dropdown-content">
+            <a href="hikayeli.html">Hikayeli</a>
+            <a href="simulasyon.html">Simülasyon</a>
+            <a href="hayatta_kalma.html">Hayatta Kalma</a>
+			<a href="çok_oyunculu_korku.html">Çok Oyunculu Korku</a>
+        </div>
+    </div>
+    <a href="tarih.html">Tarih</a>
+    <a href="fitness.html">Fitness</a>
+    <a href="müzik.html">Müzik</a>
+</nav>
+
+    <div class="content">
+        <h2>Sağlıklı Yaşam</h2>
+		<div align="justify">
+        <p>Sağlıklı bir yaşam ve estetik bir vücut için fitness yapıyorum. Spor yapınca 
+		kendimi iyi hissediyorum. Fitness'a ilk başlama zamanım lisenin ortalarıydı. Bu 
+		uğraşın insanı hem fiziksel hem ruhsal açıdan iyi yönde etkilediğini herkes gibi
+		ben de söylemek isterim. Fitness yapmak istemiyorsanız en azından bir tane spor dalıyla 
+		uğraşmanızı tavsiye ederim. Fitness konusundan devam edelim. Ben genelde bölgesel
+		çalışmayı tercih eden taraftanım. Bölgesel çalışmayı açıklarsak vücudun farklı 
+		bölümlerini haftanın belli günlerine dağıtarak çalışmak diyebiliriz. Bu şekilde 
+		her bölgeden daha fazla verim alabildiğimi hissediyorum. Fakat şimdilerde zaman 
+		yetersizliğinden ötürü tüm vücut çalışmayı tercih ediyorum. Haftada iki üç gün
+		vücudun tüm bölümlerini aktif kullanmaya çalışarak antrenman yapıyorum. Antrenman
+		öncesi ısınmak, antrenman sonrası soğumak için esneme egzersizleri yapıyorum. 
+		Kolay sakatlanmamak için bu çok önemli bir adım. Antrenman ve egzersizlerin yanı sıra 
+		sağlıklı olmak ve kas kazanabilmek istiyorsak beslenme de düzgün olmalı.
+		Yeterli protein almak için her gün tavuk yediğim bir dönem olmuştu. Ama şu an yurt 
+		şartlarıyla idare ediyorum.Son olarak sizlere en sevdiğim hareketlerden bahsedeyim.
+		Bunlardan birisi "lateral raise" hareketi. Elimizdeki ağırlıklarla beraber kollarımızı 
+		belli bir açıda havaya kaldırdığımız bu hareket omuz kaslarını güzel bir şekilde çalıştırır.
+		Fakat yaparken dikkatli olunması gerekir ve çok yüksek ağırlıklarla girmemek gerekir.
+		Bir diğer hareket "plank". Bu harekette sadece ayak ucumuzun ve kollarımızın/parmaklarımızın
+		yere temas ettirerek kalan bölgelerimizi havada tutarak bekleriz. Bunu yaptığımızda vücudun sırt, 
+		karın, kalça olmak üzere birçok bölge çalışıyor. Süre olarak pr(personal recor) denemesi yapmak bana 
+		eğlenceli geliyor. Son olarak "dips" hareketinden bahsedeyim. Ellerimizi omuz genişliğinde desteğe 
+        yerleştiriyoruz ve kolları bükerek vücudumuzu aşağı indirip kaldırıyoruz. Ben bunu evde 
+		ellerimi bir koltuğa koyarak yapıyorum. Bu hareket triceps(arka kol) ve göğüs kasları için
+		gayet etkili ve beni sevdiğim bir hareket. Böylece fitness ile olan alakamı kısaca anlatmış 
+		oldum. Bunu yapmak için bir spor salonuna kaydolma zorunluluğunuz olduğunu düşünmeyin.
+		Bunu yaparken sadece ben, dambıllarım ve kulaklığım vardı. Bu yüzden sağlıcakla kalın, sporsuz kalmayın!
+		</p>
+		</div>
+		<img src="C:\Users\sudee\OneDrive\Masaüstü\c112c8a5-5fa2-4358-8df7-24182f6cb1d5.jpg" alt="dambıl resmi" title="dambıl" />
+    </div>
+	</div>
+    <footer>
+        <p>&copy; 2024 BMG Projesi</p>
+    </footer>
+</body>
+</html>

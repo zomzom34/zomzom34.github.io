@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyunlar</title>
+    <style>
+        body {
+            font-family: 'Roboto', Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f8fe;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #1e90ff, #87cefa);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #2575fc;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #f3f8fe;
+            color: #6a11cb;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            font-size: 2rem;
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+		nav {
+			display: flex;
+			justify-content: center;
+			background: #555;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			padding: 1rem;
+			display: block;
+			position: relative;
+		}
+
+		nav {
+			display: flex;
+			justify-content: center;
+			background: #555;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			padding: 1rem;
+			display: block;
+			position: relative;
+		}
+
+		nav .dropdown {
+			position: relative;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			top: 100%; /* Alt seçenekler, Oyunlar butonunun hemen altında başlar */
+			left: 0;
+			background: #777;
+			min-width: 150px;
+			z-index: 1;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+		}
+
+		.dropdown-content a {
+			padding: 0.5rem 1rem;
+			color: white;
+			background: #777;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown-content a:hover {
+			background: #888;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block; /* Hover yapıldığında alt seçenekler görünür */
+			}
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+		/* Başlık 1 için stil */
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+		/* Başlık 2 için stil */
+		h2 {
+            color: #2575fc;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+		/* Paragraflar için stil */
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #444;
+        }
+		
+		/* Tablo için stil */
+        table {
+            width: 100%;/* Tablo genişliğini %100 ayarladım*/
+            border-collapse: collapse;/* Hücrelerin sınırları birleşik */
+            margin: 20px 0;
+        }
+		/* Tablo, başlık hücreleri ve veri hücreleri için sınırlar */
+        table, th, td {
+            border: 1px solid #ddd;/* Hücrelerin sınırı gri olacak*/
+        }
+		
+		/* Başlık hücreleri (th) ve veri hücreleri (td) için stil */
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+		
+		/* Başlık hücrelerinin arka plan rengi */
+        th {
+            background-color: #0288d1;
+            color: white;
+        }
+		
+        tr:nth-child(even) {
+            background-color: #f1f8e9;/* Çift sayılı satırlar için arka plan rengi açık yeşil */
+        }
+
+        tr:hover {
+            background-color: #e1f5fe;/* Satır üzerine gelindiğinde arka plan rengi açık mavi*/
+        }
+
+        td {
+            color: #0288d1;/* Veri hücrelerinin yazı rengi mavi */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+			color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Oyunlar</h1><!-- İçerik başlığı -->
+    </header>
+	<!--Ana sayfa, oyunlar ve alt seçenekleri, tarih, fitness, müzik sayfalarının bağlantısı -->
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <div class="dropdown">
+            <a href="oyunlar.html" class="dropdown-btn">Oyunlar</a>
+            <div class="dropdown-content">
+                <a href="hikayeli.html">Hikayeli</a>
+                <a href="simulasyon.html">Simülasyon</a>
+                <a href="hayatta_kalma.html">Hayatta Kalma</a>
+				<a href="çok_oyunculu_korku.html">Çok Oyunculu Korku</a>
+            </div>
+        </div>
+        <a href="tarih.html">Tarih</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="müzik.html">Müzik</a>
+    </nav>
+    <div class="content">
+        <h2>Oyun Türleri ve Detaylar</h2>
+		<div align="justify">
+			<p>Oyunlar sayfasında en sevdiğim oyunları sizinle paylaşıyorum. Oyunlar seçeneğinin üstüne 
+			gelerek bazı oyunların türlere göre ayrılmış hallerinden istediğinize tıklayıp bakabilirsiniz. O 
+			sayfalarda oyunlar daha detaylı incelenmiştir. Genel olarak çoğu oyun türünü seviyorum. Özellikle 
+			korku oyunları ilgi alanıma giriyor. Korku oyunları dışında hikayeli oyunlar, hayatta kalma 
+			oyunları hoşuma gidiyor. Strateji gerektiren, aksiyon ve macera içeren oyunlar ise fazlasıyla
+			sürükleyici oluyor. Simülasyon oyunları ve genelde bu tarzdaki roleplay yapılabilecek oyunları 
+			başkaları oynarken izlemek bence aşırı zevkli.</p>
+			<p>Ayrıntılı olarak diğer sayfalarda incelediğim oyunların türlerinin ve çıkış tarihlerinin 
+			bilgisine aşağıdaki tabloda ulaşabilirsiniz.</p>
+		</div>
+       <!--Oyunların adı, türü ve çıkış tarihlerini gösteren tablo-->
+        <table>
+			<!-- Tablo başlıkları -->
+            <thead>
+                <tr>
+                    <th>Oyun Adı</th>
+                    <th>Tür</th>
+                    <th>Çıkış Tarihi</th>
+                </tr>
+            </thead>
+			<!-- Tablo için kullanılan veriler -->
+            <tbody>
+			<!--tr etiketi satır, td etiketi sütunları gösterir -->
+                <tr>
+                    <td>God of War</td>
+                    <td>Hikayeli</td>
+                    <td>2018</td>
+                </tr>
+				<tr>
+                    <td>Resident Evil</td>
+                    <td>Hikayeli</td>
+                    <td>1996</td>
+                </tr>
+				<tr>
+                    <td>Cooking Simulator</td>
+                    <td>Simülasyon</td>
+                    <td>2019</td>
+                </tr>
+                <tr>
+                    <td>Papers, Please</td>
+                    <td>Simülasyon</td>
+                    <td>2013</td>
+                </tr>
+				<tr>
+                    <td>The Long Dark</td>
+                    <td>Hayatta Kalma</td>
+                    <td>2014</td>
+                </tr>
+				<tr>
+                    <td>60 Seconds!</td>
+                    <td>Hayatta Kalma</td>
+                    <td>2015</td>
+                </tr>
+                <tr>
+                    <td>Devour</td>
+                    <td>Korku</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>Dead by Daylight</td>
+                    <td>Korku</td>
+                    <td>2016</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <p>&copy; 2024 BMG Projesi</p>
+    </footer>
+</body>
+</html>
